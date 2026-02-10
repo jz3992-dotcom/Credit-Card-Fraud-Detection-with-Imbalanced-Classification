@@ -16,22 +16,6 @@ This project compares baseline and imbalance-aware approaches (SMOTE / undersamp
 - **Imbalance handling**: imbalanced-learn (SMOTE), undersampling
 - **Visualization**: matplotlib / seaborn
 
-## Project Structure (suggested)
-├── data/ # (optional) raw/processed data (not tracked if sensitive)
-├── notebooks/
-│ └── fraud_detection.ipynb # exploration + experiments
-├── src/
-│ ├── preprocess.py # cleaning, split, scaling
-│ ├── features.py # feature engineering
-│ ├── train.py # training loop
-│ ├── evaluate.py # metrics + plots
-│ └── utils.py
-├── outputs/
-│ ├── figures/ # ROC/PR curves, confusion matrix, etc.
-│ └── reports/ # experiment summaries
-├── requirements.txt
-└── README.md
-
 ## Data
 This project uses a credit card transactions dataset with anonymized features and an extremely imbalanced label distribution (fraud is rare).  
 > If you are using a public dataset (e.g., Kaggle “Credit Card Fraud Detection”), place the CSV under `data/` (and keep it out of Git history if required).
@@ -70,9 +54,3 @@ This project uses a credit card transactions dataset with anonymized features an
 - Impact: **+21% fraud recall** (vs baseline)
 - Practical insight: improved detection came with increased false positives, requiring threshold tuning based on operational tolerance.
 
-## How to Run
-### 1) Setup
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
